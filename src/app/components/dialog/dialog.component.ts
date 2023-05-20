@@ -36,7 +36,7 @@ export class DialogComponent {
 
   sumbit() {
     this.http
-      .post('http://dorofeev-family.ru/api/send_form', this.form.value)
+      .post('https://dorofeev-family.ru/api/send_form', this.form.value)
       .subscribe({
         next: () => {
           this.requestCompleted(
