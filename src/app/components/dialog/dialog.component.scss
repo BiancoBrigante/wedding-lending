@@ -1,0 +1,54 @@
+article {
+  position: relative;
+}
+
+label {
+  display: block;
+}
+
+.close-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+form {
+  text-align: start;
+  font-size: 1rem;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 0.2rem;
+  border-radius: 0.4rem;
+  outline: none;
+  border: 1px solid gray;
+}
+
+input[type='radio'] {
+  accent-color: rgb(48, 37, 201);
+}
+
+textarea {
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form__question {
+  margin: 1rem 0;
+}
+
+button {
+  font-size: 1.4rem;
+  padding: 0.4rem 1rem;
+  width: 100%;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  background-color: navy;
+  color: white;
+  &:disabled {
+    opacity: 0.1;
+  }
+}

@@ -1,36 +1,58 @@
+@import '@angular/cdk/overlay-prebuilt.css';
+
 @font-face {
-    font-family: Agoniae;
-    src: url('assets/fonts/Agoniae.woff');
+  font-family: Agoniae;
+  src: url('assets/fonts/Agoniae.woff');
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 h2 {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 h3 {
-    font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
-ul, li, menu {
-    list-style: none;
+ul,
+li,
+menu {
+  list-style: none;
 }
 
 .handwrited {
-    font-family: Agoniae, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: Agoniae, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+    sans-serif;
+}
+
+.overlay-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-panel {
+  background-color: antiquewhite;
+  height: fit-content;
+  max-height: 95vh;
+  max-width: 99vw;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem;
+  border-radius: 1rem;
+  overflow: hidden;
 }

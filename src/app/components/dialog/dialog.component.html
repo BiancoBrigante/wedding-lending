@@ -1,1 +1,143 @@
-<p>dialog works!</p>
+<article>
+  <span class="close-icon">❌</span>
+  <h1 class="handwrited">Подтверждение</h1>
+  <form [formGroup]="form" (submit)="sumbit()">
+    <div class="form__question">
+      <label for="name-input">
+        Ваше имя
+        <br />
+        <input
+          type="text"
+          id="name-input"
+          formControlName="name"
+          placeholder="Иванов Иван Иванович"
+        />
+      </label>
+    </div>
+    <div class="form__question">
+      <p>Есть ли у Вас особые предпочтения по еде?</p>
+      <label for="food-any">
+        <input value="нет" type="radio" id="food-any" formControlName="food" />
+        нет
+      </label>
+      <label for="food-no-meat">
+        <input
+          value="не ем мясо"
+          type="radio"
+          id="food-no-meat"
+          formControlName="food"
+        />
+        не ем мясо
+      </label>
+      <label for="food-no-fish">
+        <input
+          value="не ем рыбу"
+          type="radio"
+          id="food-no-fish"
+          formControlName="food"
+        />
+        не ем рыбу
+      </label>
+      <label for="food-vegan">
+        <input
+          value="вегетарианец"
+          type="radio"
+          id="food-vegan"
+          formControlName="food"
+        />
+        вегетарианец
+      </label>
+    </div>
+    <div class="form__question">
+      <p>Будет ли с Вами на празднике ребёнок?</p>
+      <label for="child-yes">
+        <input
+          type="radio"
+          id="child-yes"
+          value="да, будет"
+          formControlName="child"
+        />
+        Да, будет
+      </label>
+      <label for="child-no">
+        <input
+          type="radio"
+          id="child-no"
+          value="нет, не будет"
+          formControlName="child"
+        />
+        Нет, не будет
+      </label>
+    </div>
+    <div class="form__question">
+      <p>Какой алкоголь Вы предпочитаете?</p>
+      <label for="alcohol-red-wine">
+        <input
+          type="radio"
+          id="alcohol-red-wine"
+          value="красное вино"
+          formControlName="alcohol"
+        />
+        Красное вино
+      </label>
+      <label for="alcohol-white-wine">
+        <input
+          type="radio"
+          id="alcohol-white-wine"
+          value="белое вино"
+          formControlName="alcohol"
+        />
+        Белое вино
+      </label>
+      <label for="alcohol-champagne">
+        <input
+          type="radio"
+          id="alcohol-champagne"
+          value="шампанское"
+          formControlName="alcohol"
+        />
+        Шампанское
+      </label>
+      <label for="alcohol-whiskey">
+        <input
+          type="radio"
+          id="alcohol-whiskey"
+          value="виски/коньяк"
+          formControlName="alcohol"
+        />
+        Виски/коньяк
+      </label>
+      <label for="alcohol-vodka">
+        <input
+          type="radio"
+          id="alcohol-vodka"
+          value="водка"
+          formControlName="alcohol"
+        />
+        Водка
+      </label>
+      <label for="no-alcohol">
+        <input
+          type="radio"
+          id="no-alcohol"
+          value="не пью"
+          formControlName="alcohol"
+        />
+        Не буду пить алкоголь
+      </label>
+    </div>
+    <div class="form__question">
+      <label for="message">
+        Здесь Вы можете оставить свои пожелания
+        <br />
+        <textarea
+          id="message"
+          cols="30"
+          rows="3"
+          formControlName="message"
+        ></textarea>
+      </label>
+    </div>
+    <button [disabled]="!form.valid">Отправить</button>
+  </form>
+</article>

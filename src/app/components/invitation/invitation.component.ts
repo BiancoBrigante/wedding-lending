@@ -12,10 +12,7 @@ import { DialogComponent } from '../dialog/dialog.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class InvitationComponent {
-
-  constructor(private dialog: DialogService) {
-
-  }
+  constructor(private dialog: DialogService) {}
 
   showModal() {
     this.dialog.open(DialogComponent);

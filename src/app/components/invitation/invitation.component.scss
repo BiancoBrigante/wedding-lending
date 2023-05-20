@@ -46,6 +46,7 @@ h3 {
     background-color: dimgray;
     border: none;
     transition: .1s;
+    cursor: pointer;
     &:hover {
         padding: .65rem 3rem .55rem 3rem;
     }
