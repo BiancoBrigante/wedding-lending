@@ -1,0 +1,86 @@
+.hero {
+    padding: 3rem 0;
+}
+
+.hero::before {
+    content: "";
+    background-image: url("/assets/images/hero-background.webp");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    opacity: .4;
+}
+
+.wrapper {
+    width: fit-content;
+    margin: auto;
+}
+
+.names-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 7vmin;
+    margin-bottom: 12vmin;
+}
+
+.bride {
+    line-height: .6;
+}
+
+.date-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 0.6rem;
+    width: fit-content;
+    margin: 1.4rem auto 0 auto;
+}
+
+.date__day, .date__time {
+    padding: 0.4rem 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.date__date-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date__date {
+    font-size: 2rem;
+    padding: 0.4rem 0;
+    color: plum
+}
+
+.countdown-container {
+    margin-top: 3rem;
+}
+
+.countdown-items {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.countdown__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.countdown__number {
+    font-size: 5vmin;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.countdown__description {
+    font-size: 3vmin;
+}

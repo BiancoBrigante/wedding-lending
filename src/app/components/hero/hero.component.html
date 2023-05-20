@@ -1,0 +1,42 @@
+<article class="hero">
+  <div class="hero-wrapper">
+    <div class="names-container">
+      <span class="groon handwrited">Дмитрий</span>
+      <span class="bride handwrited">&nbsp;&nbsp;&nbsp;Елена</span>
+    </div>
+    <p>ПРИГЛАШАЕМ НА СВАДЬБУ</p>
+    <div class="date-container">
+      <time class="date__day">СУББОТА</time>
+      <div class="date__date-container">
+        <span>ИЮЛЬ</span>
+        <time class="date__date">7</time>
+        <span>2023</span>
+      </div>
+      <time class="date__time">17:00</time>
+    </div>
+    <div class="countdown-container handwrited">
+      <ul class="countdown-items">
+        <li class="countdown__item">
+          <span class="countdown__number">{{ weeksLeft() }}</span>
+          <span class="countdown__description">недель</span>
+        </li>
+        <li class="countdown__item">
+          <span class="countdown__number">{{ daysLeft() }}</span>
+          <span class="countdown__description">дней</span>
+        </li>
+        <li class="countdown__item">
+          <span class="countdown__number">{{ hoursLeft() }}</span>
+          <span class="countdown__description">часов</span>
+        </li>
+        <li class="countdown__item">
+          <span class="countdown__number">{{ minutesLeft() }}</span>
+          <span class="countdown__description">минут</span>
+        </li>
+        <li class="countdown__item">
+          <span class="countdown__number">{{ secondsLeft() }}</span>
+          <span class="countdown__description">секунд</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</article>

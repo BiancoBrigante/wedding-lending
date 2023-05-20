@@ -1,0 +1,52 @@
+.invitation {
+    padding: 4rem 0 3rem 0;
+    max-width: 60ch;
+    margin: auto;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+h3 {
+    margin: 1rem 0;
+}
+
+.dress-colors {
+    display: flex;
+    justify-content: center;
+    gap: .4rem;
+    margin: 1rem 0 3rem 0;
+}
+
+.dress-color {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    &--yellow {
+        background-color: #f6ff79;
+    }
+    &--cream {
+        background-color: #fff1e2;
+    }
+    &--lime {
+        background-color: #f2ffe9;
+    }
+    &--blue {
+        background-color: #9cbdff;
+    }
+    &--red {
+        background-color: #ffb4b4;
+    }
+}
+
+.apply-button {
+    padding: .6rem 3rem;
+    color: white;
+    background-color: dimgray;
+    border: none;
+    transition: .1s;
+    &:hover {
+        padding: .65rem 3rem .55rem 3rem;
+    }
+}
