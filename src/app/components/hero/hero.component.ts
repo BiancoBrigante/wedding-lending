@@ -22,7 +22,7 @@ export class HeroComponent {
   }
 
   calculateTimeLeft() {
-    const timeLeft = new Date('07/07/2023 17:00').getTime() - new Date().getTime();
+    const timeLeft = new Date('07/08/2023 17:00').getTime() - new Date().getTime();
     this.weeksLeft.set(Math.floor(timeLeft/(1000*60*60*24*7)));
     this.daysLeft.set(Math.floor(timeLeft/(1000*60*60*24)) - this.weeksLeft()*7);
     this.hoursLeft.set(Math.floor(timeLeft/(1000*60*60)) - (this.weeksLeft()*7 + this.daysLeft())*24);
