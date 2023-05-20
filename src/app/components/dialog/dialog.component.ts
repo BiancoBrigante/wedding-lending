@@ -7,6 +7,8 @@ import {
   FormControl,
   Validators,
 } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'wedding-dialog',
@@ -24,10 +26,36 @@ export class DialogComponent {
     alcohol: new FormControl('', Validators.required),
     message: new FormControl(''),
   });
-  constructor(private dialogRef: DialogRef) {}
+  formSubmited = false;
+  requestCompletedMessage = '';
+  constructor(
+    private dialogRef: DialogRef,
+    private http: HttpClient,
+    private ref: ChangeDetectorRef
+  ) {}
 
   sumbit() {
-    console.log(this.form.value);
+    this.http
+      .post('http://dorofeev-family.ru/api/send_form', this.form.value)
+      .subscribe({
+        next: () => {
+          this.requestCompleted(
+            'Подтверждение успешно отправлено! Ждём Вас на нашей свадьбе!'
+          );
+        },
+        error: () =>
+          this.requestCompleted(
+            'При отправке возникла ошибка. Пожалуйста, попробуйте позже.'
+          ),
+      });
+  }
+
+  requestCompleted(message: string) {
+    this.ref.markForCheck();
+    this.form.reset();
+    this.requestCompletedMessage = message;
+    this.formSubmited = true;
+    setTimeout(() => this.dialogRef.close(), 2000);
   }
 
   close() {
