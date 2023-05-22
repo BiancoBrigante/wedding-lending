@@ -66,19 +66,17 @@ export class DialogComponent {
         (this.form.controls.alcohol.controls.no.value ? 'не пью' : ''),
       message: this.form.controls.message.value,
     };
-    this.http
-      .post('https://dorofeev-family.ru/api/send_form', data)
-      .subscribe({
-        next: () => {
-          this.requestCompleted(
-            'Подтверждение успешно отправлено! Ждём Вас на нашей свадьбе!'
-          );
-        },
-        error: () =>
-          this.requestCompleted(
-            'При отправке возникла ошибка. Пожалуйста, попробуйте позже.'
-          ),
-      });
+    this.http.post('https://dorofeev-family.ru/api/send_form', data).subscribe({
+      next: () => {
+        this.requestCompleted(
+          'Подтверждение успешно отправлено! Ждём Вас на нашей свадьбе!'
+        );
+      },
+      error: () =>
+        this.requestCompleted(
+          'При отправке возникла ошибка. Пожалуйста, попробуйте позже.'
+        ),
+    });
   }
 
   checkbox(event: Event) {
