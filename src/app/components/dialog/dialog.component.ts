@@ -25,10 +25,11 @@ export class DialogComponent {
     child: new FormControl('', Validators.required),
     alcohol: new FormGroup(
       {
-        redWine: new FormControl(false),
+        redDryWine: new FormControl(false),
+        redSemiSweetWine: new FormControl(false),
         whiteWine: new FormControl(false),
         champagne: new FormControl(false),
-        whiskey: new FormControl(false),
+        moonshine: new FormControl(false),
         vodka: new FormControl(false),
         no: new FormControl(false),
       },
@@ -50,17 +51,20 @@ export class DialogComponent {
       food: this.form.controls.food.value,
       child: this.form.controls.child.value,
       alcohol:
-        (this.form.controls.alcohol.controls.redWine.value
-          ? ' красное вино,'
+        (this.form.controls.alcohol.controls.redDryWine.value
+          ? ' красное сухое вино,'
+          : '') +
+        (this.form.controls.alcohol.controls.redSemiSweetWine.value
+          ? ' красное полусладкое вино,'
           : '') +
         (this.form.controls.alcohol.controls.whiteWine.value
-          ? ' белое вино,'
+          ? ' белое полусладкое вино,'
           : '') +
         (this.form.controls.alcohol.controls.champagne.value
           ? ' шампанское,'
           : '') +
-        (this.form.controls.alcohol.controls.whiskey.value
-          ? ' коньяк/виски, '
+        (this.form.controls.alcohol.controls.moonshine.value
+          ? ' самогон, '
           : '') +
         (this.form.controls.alcohol.controls.vodka.value ? ' водка,' : '') +
         (this.form.controls.alcohol.controls.no.value ? 'не пью' : ''),

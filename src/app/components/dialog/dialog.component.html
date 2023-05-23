@@ -78,58 +78,52 @@
     </div>
     <div class="form__question" formGroupName="alcohol">
       <p>Какой алкоголь Вы предпочитаете?</p>
-      <label for="alcohol-red-wine">
+      <label for="alcohol-red-dry-wine">
         <input
           type="checkbox"
-          id="alcohol-red-wine"
-          value="красное вино"
-          formControlName="redWine"
+          id="alcohol-red-dry-wine"
+          formControlName="redDryWine"
         />
-        Красное вино
+        Красное сухое вино
+      </label>
+      <label for="alcohol-red-semisweet-wine">
+        <input
+          type="checkbox"
+          id="alcohol-red-semisweet-wine"
+          formControlName="redSemiSweetWine"
+        />
+        Красное полусладкое вино
       </label>
       <label for="alcohol-white-wine">
         <input
           type="checkbox"
           id="alcohol-white-wine"
-          value="белое вино"
           formControlName="whiteWine"
         />
-        Белое вино
+        Белое полусладкое вино
       </label>
       <label for="alcohol-champagne">
         <input
           type="checkbox"
           id="alcohol-champagne"
-          value="шампанское"
           formControlName="champagne"
         />
         Шампанское
+      </label>
+      <label for="alcohol-vodka">
+        <input type="checkbox" id="alcohol-vodka" formControlName="vodka" />
+        Водка
       </label>
       <label for="alcohol-whiskey">
         <input
           type="checkbox"
           id="alcohol-whiskey"
-          value="виски/коньяк"
-          formControlName="whiskey"
+          formControlName="moonshine"
         />
-        Виски/коньяк
-      </label>
-      <label for="alcohol-vodka">
-        <input
-          type="checkbox"
-          id="alcohol-vodka"
-          value="водка"
-          formControlName="vodka"
-        />
-        Водка
+        Самогон
       </label>
       <label for="no-alcohol">
-        <input
-          type="checkbox"
-          id="no-alcohol"
-          value="не пью"
-          formControlName="no"
-        />
+        <input type="checkbox" id="no-alcohol" formControlName="no" />
         Не буду пить алкоголь
       </label>
     </div>
